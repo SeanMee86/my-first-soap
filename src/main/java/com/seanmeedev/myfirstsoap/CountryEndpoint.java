@@ -14,12 +14,8 @@ import com.seanmeedev.my_first_soap.GetCountryResponse;
 public class CountryEndpoint {
 	private static final String NAMESPACE_URI = "http://seanmeedev.com/my-first-soap";
 
-	private CountryRepository countryRepository;
-
 	@Autowired
-	public CountryEndpoint(CountryRepository countryRepository) {
-		this.countryRepository = countryRepository;
-	}
+	private CountryRepository countryRepository;
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
 	@ResponsePayload
